@@ -115,14 +115,14 @@ li+li {
 
 /* modal */
 .modal {
-    max-width: 420px;
+    max-width: 100%;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
     padding: 1rem;
     border-radius: 5px;
     position: absolute;
     background-color: var(--clr-white);
     top: 10rem;
-    right: 30%;
+    right: 20%;
     z-index: 2;
 }
 
@@ -164,9 +164,9 @@ li+li {
     content: '';
     position: absolute;
     height: .5px;
-    width: 135px;
+    width: 90px;
     background-color: var(--clr-black);
-    left: 1rem;
+    left: 2rem;
     top: .9rem;
 }
 
@@ -174,9 +174,9 @@ li+li {
     content: '';
     position: absolute;
     height: .5px;
-    width: 135px;
+    width: 90px;
     background-color: var(--clr-black);
-    right: 1rem;
+    right: 2rem;
     top: .9rem;
 }
 
@@ -523,7 +523,6 @@ footer p {
     }
     .input-areas input, .input-areas button, .input2{
         margin: 0;
-        /* border:  2px solid red; */
     }
     .area-one{
         width: 34%;
@@ -535,7 +534,22 @@ footer p {
     .places-header {
         font-size: 3rem;
     }
+    .modal{
+        max-width: 420px;
+        right: 30%;
+    }
 
+    .modal-span::before {
+        width:135px;
+        left: 1rem;
+        top: .9rem;
+    }
+    
+    .modal-span::after {
+        width:135px;
+        right: 1rem;
+        top: .9rem;
+    }
     .grid-wrapper {
         display: flex;
         gap: 10px;

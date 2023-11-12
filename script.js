@@ -23,8 +23,7 @@ menu.addEventListener("click", function () {
   for (const span of showSpan) {
     span.classList.toggle("show-span");
   }
-  console.log(navBar);
-  console.log(showSpan);
+ 
 });
 
 signIn.addEventListener("click", function () {
@@ -57,22 +56,17 @@ const observerFunc = function(entries, observer){
   if(!entry.isIntersecting) return;
   entry.target.classList.remove('section--hidden')
   observer.unobserve(entry.target)
-
 }
 const sectionObserver = new IntersectionObserver(observerFunc,{
   root: null,
   threshold: 0.1
 })
 
-
 allSection.forEach(section=> {
   sectionObserver.observe(section)
   section.classList.add('section--hidden')
 })
  
-
- 
-
 function inputArea(){
   let template = ''
  template+=  `
