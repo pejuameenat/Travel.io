@@ -505,11 +505,11 @@ footer p {
     margin:  2rem 0;
 }
 .container{
-    max-width: 1200px;
+    max-width: 1170px;
 }
     .input-areas{
         position: absolute;
-        bottom: -12%;
+        bottom: -13%;
         left: 50%;
         transform: translate(-50%, -50%);
         display: flex;
