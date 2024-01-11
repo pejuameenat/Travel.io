@@ -309,7 +309,6 @@ html {
     border-radius: 3px;
     padding-bottom: .5rem;
     background-color: var(--clr-white);
-
 }
 
 /* Places */
@@ -390,7 +389,6 @@ html {
     flex-direction: column-reverse;
     gap: 20px;
     text-align: center;
-    /* padding: 1rem; */
 }
 
 .footer p {
@@ -511,7 +509,7 @@ footer p {
 }
     .input-areas{
         position: absolute;
-        bottom: -2%;
+        bottom: -12%;
         left: 50%;
         transform: translate(-50%, -50%);
         display: flex;
