@@ -1,16 +1,15 @@
 const menu = document.querySelector(".menu");
 const signIn = document.querySelector(".sign-in");
+const logo = document.querySelector('.logo')
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const closeBtn = document.querySelector(".cancel");
-const navBar = document.querySelector("nav");
-const showSpan = document.querySelectorAll(".hide-span");
+const navBar = document.querySelector('.show-lists');
 const suscribeBtn = document.querySelector(".suscribe");
 const EmailInput = document.querySelector(".email-input");
 const textFooter = document.querySelector(".text-footer");
 const updateYear = document.querySelector(".footer-span");
 const allSection = document.querySelectorAll(".section");
-const logOut = document.getElementById('log-out');
 const inputAreas = document.querySelector(".input-areas");
 
 
@@ -18,12 +17,11 @@ const closeModal = function () {
   modal.classList.add("hide");
   overlay.classList.add("hide");
 };
+
 menu.addEventListener("click", function () {
-  navBar.classList.toggle("nav-width");
-  for (const span of showSpan) {
-    span.classList.toggle("show-span");
-  }
- 
+  navBar.classList.toggle("show");
+  logo.classList.add('position-logo')
+
 });
 
 signIn.addEventListener("click", function () {
@@ -70,7 +68,10 @@ allSection.forEach(section=> {
 function inputArea(){
   let template = ''
  template+=  `
-    <div class="area-one"><input type="text" name="" id="" placeholder="Country"></div>
+    <div class="area-one">
+    <input type="text" name="" id="" placeholder="From">
+    <input type="text" name="" id="" placeholder="Destination">
+    </div>
     <div class="area-one input2"><input type="date" name="" id=""></div>
     <button>Search</button>`
   
@@ -78,7 +79,5 @@ function inputArea(){
 
 }
 inputArea()
-logOut.addEventListener('click', function(){
-  alert('Are you sure you want to log out?')
-})
+ 
  
