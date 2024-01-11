@@ -51,6 +51,7 @@ html {
     padding: 1rem;
     background-color: var(--clr-white);
     box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    z-index: 99;
  }
  nav img{
     width: 30px
@@ -151,6 +152,7 @@ html {
 
 /* home */
 #home {
+    position: relative;
     padding: 6rem 0 0 5rem;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(./images/About-travel.jpg);
     background-repeat: no-repeat;
@@ -170,7 +172,8 @@ html {
 .container {
     width: 95%;
     max-width: 1300px;
-    margin: 2rem auto;
+    margin: 0 auto;
+    padding: 2rem 0;
 }
 
 .intro {
@@ -230,7 +233,6 @@ html {
     justify-content: center;
 }
 
-
 .input-areas{
     max-width: 90%;
     margin: 0 auto;
@@ -261,7 +263,7 @@ html {
 
 .grid-container {
     max-width: 1000px;
-    margin: 2rem auto;
+    margin: 4rem auto;
 }
 
 .grid-container p {
@@ -306,6 +308,7 @@ html {
     text-align: center;
     border-radius: 3px;
     padding-bottom: .5rem;
+    background-color: var(--clr-white);
 
 }
 
@@ -356,7 +359,6 @@ html {
 }
 
 .explore {
-    padding: 1rem;
     color: var(--clr-white);
     text-align: center;
 }
@@ -368,7 +370,6 @@ html {
 
 .explore p {
     font-size: .9rem;
-    padding: .9rem 0;
 }
 
 /* foooter */
@@ -381,7 +382,7 @@ html {
 }
 
 #footer .container {
-    max-width: 1000px;
+    max-width: 1170px;
 }
 
 .footer {
@@ -389,7 +390,7 @@ html {
     flex-direction: column-reverse;
     gap: 20px;
     text-align: center;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
 .footer p {
@@ -505,7 +506,14 @@ footer p {
     display: inline-block;
     margin:  2rem 0;
 }
+.container{
+    max-width: 1200px;
+}
     .input-areas{
+        position: absolute;
+        bottom: -2%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         display: flex;
         justify-content: space-between;
         align-items: center;
