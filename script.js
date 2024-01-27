@@ -30,6 +30,9 @@ signIn.addEventListener("click", function () {
 });
 
 closeBtn.addEventListener("click", closeModal);
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeModal
+})
 overlay.addEventListener("click", closeModal);
 
 const warning = document.createElement("p");

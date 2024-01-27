@@ -374,6 +374,7 @@ html {
 /* foooter */
 #footer {
     padding: 2rem 0 0 4rem;
+    box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.3);
 }
 
 #footer img {
