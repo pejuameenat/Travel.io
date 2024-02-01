@@ -18,12 +18,6 @@ const closeModal = function () {
   overlay.classList.add("hide");
 };
 
-menu.addEventListener("click", function () {
-  navBar.classList.toggle("show");
-  logo.classList.add('position-logo')
-
-});
-
 signIn.addEventListener("click", function () {
   modal.classList.remove("hide");
   overlay.classList.remove("hide");
@@ -46,6 +40,11 @@ suscribeBtn.addEventListener("click", function (e) {
     warning.style.display = "none";
   }
 });
+
+ document.querySelector('.menu').addEventListener('click', function () {
+   document.querySelector('nav').classList.toggle('active')
+   document.querySelector('.show-lists').classList.toggle('nav-lists-active')
+ })
 
 const date = new Date();
 const year = date.getFullYear();

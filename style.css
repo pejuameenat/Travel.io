@@ -14,7 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style:none ;
+    list-style: none;
 }
 
 body {
@@ -26,22 +26,13 @@ html {
 }
 
 /* nav */
-.logo{
+.logo {
     color: var(--clr-black);
     text-decoration: none;
     font-size: 2rem;
 }
-/* .menu-logo{
-    position: relative;
-} */
-/* js class */
-.position-logo{
-  position: absolute;
-  top: 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-}
- header{
+
+header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -50,22 +41,29 @@ html {
     align-items: center;
     padding: 1rem;
     background-color: var(--clr-white);
-    box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
     z-index: 99;
- }
- nav img{
-    width: 30px
- }
- nav ul{
-    display:none;
- }
+}
 
- .nav-link, .sign-in{
+nav img {
+    width: 30px
+}
+
+.nav-link {
+    display: block;
+    color: var(--clr-black);
+    padding: .5rem;
+    transition: 400ms;
+}
+
+.nav-link,
+.sign-in {
     text-decoration: none;
     color: var(--clr-black);
     padding: .7rem;
     transition: 400ms ease-in;
 }
+
 /* modal */
 .modal {
     max-width: 100%;
@@ -87,10 +85,11 @@ html {
     display: none;
 }
 
-.show{
+.show {
     display: block;
-    float:left;
+    float: left;
 }
+
 .cancel {
     float: right;
     font-size: 1.3rem;
@@ -153,12 +152,12 @@ html {
 /* home */
 #home {
     position: relative;
-    padding: 6rem 0 0 5rem;
+    padding: 6rem 0 5rem 0;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(./images/About-travel.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: auto;
 }
 
 .section {
@@ -169,11 +168,12 @@ html {
     opacity: 0;
     transform: translateY(8rem);
 }
+
 .container {
     width: 95%;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .intro {
@@ -212,11 +212,12 @@ html {
     transition: 400ms linear;
 }
 
-.area-one{
+.area-one {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 @keyframes slideRight {
     0% {
         transform: translateX(-15%);
@@ -233,13 +234,15 @@ html {
     justify-content: center;
 }
 
-.input-areas{
+.input-areas {
     max-width: 90%;
     margin: 0 auto;
     background-color: var(--clr-mint);
     padding: .5rem;
 }
-.input-areas input, .input-areas button{
+
+.input-areas input,
+.input-areas button {
     width: 100%;
     display: block;
     padding: 1rem;
@@ -248,17 +251,21 @@ html {
     border: 0;
 }
 
-.input-areas button{
+.input-areas button {
     background-color: cadetblue;
     color: var(--clr-white)
 }
-.input2{
+
+.input2 {
     margin-top: .9rem;
 }
 
 /* about */
-#about {
-    padding: 2rem 0 0 4rem;
+#about,
+#places,
+#explore,
+#footer {
+    padding: 2rem 0 ;
 }
 
 .grid-container {
@@ -312,10 +319,6 @@ html {
 }
 
 /* Places */
-#places {
-    padding: 2rem 0 0 4rem;
-}
-
 .places-header {
     text-align: center;
 }
@@ -344,7 +347,6 @@ html {
 
 /* explore */
 #explore-section {
-    padding: 2rem 0 0 4rem;
     background-color: var(--clr-mint);
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(./images/landscape-travel.jpg);
     background-repeat: no-repeat;
@@ -369,11 +371,11 @@ html {
 
 .explore p {
     font-size: .9rem;
+    padding: .5rem 0;
 }
 
 /* foooter */
 #footer {
-    padding: 2rem 0 0 4rem;
     box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.3);
 }
 
@@ -430,7 +432,6 @@ button {
 footer {
     padding: 2rem 0 2rem 5.5rem;
     background-color: var(--clr-mint);
-
 }
 
 .footer-wrapper ul+ul {
@@ -445,7 +446,6 @@ footer {
 
 footer li {
     list-style: none;
-
 }
 
 footer a:hover {
@@ -456,39 +456,51 @@ footer p {
     color: var(--clr-white);
 }
 
-/*   */
+/* footer  */
 .footer-wrapper {
     max-width: 1000px;
     margin: 0 auto;
 }
 
-@media only screen and (min-width:820px) { 
-    nav ul{
+@media only screen and (min-width:912px) {
+    header {
+        height: 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
 
-    }
-    nav{
-         width: 60%;
-    }
-    nav img{
+    .menu {
         display: none;
     }
-    
-    .sign-in{
+
+    .show-lists {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-link {
+        display: block;
+        font-size: 1.05rem;
+        padding: 10px 25px;
+    }
+
+    .sign-in {
         border: 2px solid var(--clr-black);
         width: 120px;
         text-align: center;
-        border-radius:5px ;
+        border-radius: 5px;
     }
-    .nav-link:hover{
+
+    .nav-link:hover {
         font-weight: 600;
     }
-    .sign-in:hover{
+
+    .sign-in:hover {
         background-color: cadetblue;
         border: 0;
     }
+
     .intro {
         text-align: left;
         padding-top: 6rem;
@@ -501,14 +513,17 @@ footer p {
     .intro p {
         padding-left: 0;
     }
-  .intro button{
-    display: inline-block;
-    margin:  2rem 0;
-}
-.container{
-    max-width: 1170px;
-}
-    .input-areas{
+
+    .intro button {
+        display: inline-block;
+        margin: 2rem 0;
+    }
+
+    .container {
+        max-width: 1170px;
+    }
+
+    .input-areas {
         position: absolute;
         bottom: -13%;
         left: 50%;
@@ -519,36 +534,43 @@ footer p {
         gap: 10px;
         width: 80%;
     }
-    .input-areas input, .input-areas button, .input2{
+
+    .input-areas input,
+    .input-areas button,
+    .input2 {
         margin: 0;
     }
-    .area-one{
+
+    .area-one {
         width: 50%;
         flex-direction: row;
     }
-    .input-areas button{
+
+    .input-areas button {
         width: 30%;
     }
-  
+
     .places-header {
         font-size: 3rem;
     }
-    .modal{
+
+    .modal {
         max-width: 420px;
         right: 30%;
     }
 
     .modal-span::before {
-        width:135px;
+        width: 135px;
         left: 1rem;
         top: .9rem;
     }
-    
+
     .modal-span::after {
-        width:135px;
+        width: 135px;
         right: 1rem;
         top: .9rem;
     }
+
     .grid-wrapper {
         display: flex;
         gap: 10px;
@@ -605,5 +627,39 @@ footer p {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
+}
 
+@media only screen and (max-width:912px) {
+    header {
+        padding: 0 30px;
+    }
+
+    nav {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 0;
+        overflow: hidden;
+        transition: 400ms;
+    }
+
+    .show-lists {
+        display: block;
+        width: fit-content;
+        margin: 80px auto;
+        text-align: center;
+        opacity: 0;
+        transition: 500ms;
+    }
+
+    .nav-lists-active {
+        opacity: 1;
+    }
+
+    .active {
+        height: 450px;
+        background-color: var(--clr-white);
+    }
 }
